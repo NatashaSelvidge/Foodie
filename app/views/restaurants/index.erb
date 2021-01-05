@@ -1,8 +1,9 @@
 <h1>Restaurants</h1>
 
 <% @restaurants.each do |rest| %>
-  <h2>Name: <%= rest.name %> </h2>
-  <p> Location:<%= rest.location %></p>
-  <p><%= rest.ratings %></p>
-  <p><%= rest.reviews %></p>
+  <a href="/restaurants/<%= rest.id%>"><img src="<%= rest.image %>" alt="Restaurant Photo" width="200px"> </a>
+  <h2>Name: <a href="/restaurants/<%= rest.id%>"> <%= rest.name %> </a> </h2>
+  <p> Location: <%= rest.location %></p>
+  <p> Ratings: <%=rest.ratings %> ⭐️ </p>
+  <p> Reviews: <%= rest.reviews %></p>
 <% end %>

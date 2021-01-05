@@ -19,7 +19,10 @@ class RestaurantsController < ApplicationController
 
       #Show
       # make a get request ot '/restaurants/:id'
-
+    get '/restaurants/:id' do 
+      @restaurant = Restaurant.find_by_id(params["id"])
+      erb :"restaurants/show"
+    end 
 
   #UPDATE
 
