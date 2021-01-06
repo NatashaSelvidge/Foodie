@@ -64,6 +64,9 @@ class RestaurantsController < ApplicationController
 
   #DELETE
     # make a post (delete) request to '/restaurants/:id'
-   
+     delete '/restaurants/:id' do
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    redirect '/restaurants'
   end 
 end 
