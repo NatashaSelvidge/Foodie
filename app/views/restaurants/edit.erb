@@ -1,0 +1,23 @@
+<h1>Edit <%= @restaurant.name %> !</h1>
+<p style="color: #ef4f4f;"> <%= @error %> </p>
+<form action="/restaurants/<%= @restaurant.id%>" method="POST">
+<input type="hidden" name="_method" value="patch">
+    <label> Name:</label>
+    <input  type="text" name="restaurant[name]" value="<%= @restaurant.name %>" >
+    <br>
+    <label> Rating:</label>
+    <input  type="text" name="restaurant[ratings]" value="<%= @restaurant.ratings %>" >
+    <br>
+    <label> Location:</label>
+    <input  type="text" name="restaurant[location]" value="<%= @restaurant.location %>" >
+    <br>
+    <label> Image URL:</label>
+    <input  type="text" name="restaurant[image]" value="<%= @restaurant.image %>" >
+    <br>
+    <label> Leave a Review:</label>
+    <br>
+    <textarea name="restaurant[reviews]" id="reviews" cols="30" rows="10"> <%= @restaurant.reviews %> </textarea>
+    <br>
+    <input type="submit" value="Edit Restaurant">  
+    <a href="/restaurants">Home</a>
+</form>

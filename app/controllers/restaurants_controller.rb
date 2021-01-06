@@ -31,24 +31,39 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all.reverse
     erb :"restaurants/index"
   end 
-
-      #Show
-      # make a get request ot '/restaurants/:id'
-    get '/restaurants/:id' do 
-      @restaurant = Restaurant.find_by_id(params["id"])
-      erb :"restaurants/show"
-    end 
+  
+  #Show
+  # make a get request ot '/restaurants/:id'
+  get '/restaurants/:id' do 
+    @restaurant = Restaurant.find(params[:id])
+    erb :"/restaurants/show"
+  end 
+  
 
   #UPDATE
 
       # Edit
-      # make a get request to 'restaurants/:id/edit' 
+      get "/restaurants/:id/edit" do
+         @restaurant = Restaurant.find(params[:id])
+         erb :"/restaurants/edit"
+      end 
 
       # Update
       # make a post (patch) request to '/restaurants/:id'
-  
+      patch "/restaurants/:id" do 
+          
+        @restaurant = Restaurant.find(params[:id])
+         if !params["restaurant"]["name"].empty? || !params["restaurant"]["location"].empty? 
+          @restaurant.update(params["restaurant"])
+           redirect "/restaurants/#{params[:id]}"
+      end 
+       @error = "Invaild. Please enter name and location."
+          erb :"/restaurants/edit"
+    end 
+      
+
   #DELETE
-
     # make a post (delete) request to '/restaurants/:id'
-
+   
+  end 
 end 
