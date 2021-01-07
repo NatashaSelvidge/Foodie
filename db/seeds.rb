@@ -12,5 +12,5 @@ User.create(username: "Tosha", password: "hello")
 User.create(username: "Sarah", password: "hello")
 User.create(username: "Kristina", password: "hello")
 User.create(username: "Meg", password: "hello")
- User.create(username: "Haliey", password: "hello")
+User.create(username: "Haliey", password: "hello")
 puts "done."

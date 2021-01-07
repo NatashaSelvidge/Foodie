@@ -3,6 +3,8 @@
 * create models with relationships *
 * plan out routes for controller following restful conventions and map to CRUD actions*
 * build controller actions and passing appropriate data to views*
+* add user authentication *
+* add user authorization *
 * build views (forms)*
 * build navigation
 

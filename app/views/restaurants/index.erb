@@ -8,8 +8,9 @@
 <p> Ratings: <%=rest.ratings %> ⭐️ </p>
 <p> Reviews: <%= rest.reviews %></p>
 <a href="/restaurants/<%=rest.id%>"><img src="<%= rest.image %>" alt="Restaurant Photo" width="200px"> </a>
-<% #if the currently loggin in user created this review then they can edit otherwise dont show edit function to them %>
+<% if rest.user && session[:user_id] == rest.user.id %>
 <a href="/restaurants/<%= rest.id %>/edit">Edit</a>
+<% end %>
 <% end %>
 <h4>Don't see your favorite Restaurant?</h4>
 <h5><a href="/restaurants/new">Click to add a Restaurant</a></h5>

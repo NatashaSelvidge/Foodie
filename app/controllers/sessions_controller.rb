@@ -20,10 +20,11 @@ class SessionsController < ApplicationController
     end 
   end 
     #user can logout
-    get "/logout" do 
+  get "/logout" do 
     session.clear
     redirect '/'
 end 
+
 
 
 
