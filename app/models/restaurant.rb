@@ -1,6 +1,6 @@
 class Restaurant < ActiveRecord::Base
   
-      validates_presence_of  :name, :location
+      validates  :name, :location, presence: true 
       belongs_to :user
 
     end 

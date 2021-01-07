@@ -17,7 +17,7 @@
 
   <ul class="main-nav">
   <li><a href="/">Home</a></li>
-  <% if !logged_in? %>
+  <% if logged_in? %>
     <li><a href="/restaurants">Restaurants</a></li>
     <li><a href="/logout">Logout</a></li>
   <% else %>

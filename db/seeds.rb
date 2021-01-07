@@ -8,9 +8,9 @@ Restaurant.create(name: "Buffalo Wild Wings", location: "Costa Mesa, Ca", rating
 Restaurant.create(name: "Red Lobster", location: "Garden Grove, Ca", ratings: 5, reviews: "Great place for Yummmy Seafood!", image: "https://images.unsplash.com/photo-1591261730799-ee4e6c2d16d7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDh8fHJlc3RhdXJhbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", user_id: 3)
 Restaurant.create(name: "Yard House", location: "Irvine, Ca", ratings: 5, reviews: "Great place for friends to hangout!", image: "https://images.unsplash.com/photo-1591261730799-ee4e6c2d16d7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDh8fHJlc3RhdXJhbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", user_id: 4)
 
-User.create(username: "Tosha", password: "hello")
-User.create(username: "Sarah", password: "hello")
-User.create(username: "Kristina", password: "hello")
-User.create(username: "Meg", password: "hello")
-User.create(username: "Haliey", password: "hello")
+User.create(username: "Tosha", password_digest: "hello")
+User.create(username: "Sarah", password_digest: "hello")
+User.create(username: "Kristina", password_digest: "hello")
+User.create(username: "Meg", password_digest: "hello")
+User.create(username: "Hailey", password_digest: "hello")
 puts "done."
