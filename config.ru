@@ -6,6 +6,6 @@ end
 
 use Rack::MethodOverride
 use RestaurantsController
-# use UserController
+use UsersController
 
 run ApplicationController

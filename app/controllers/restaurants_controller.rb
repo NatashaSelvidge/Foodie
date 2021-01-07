@@ -28,6 +28,7 @@ class RestaurantsController < ApplicationController
       #Index
       #make a get request to '/restaurants'
   get "/restaurants" do 
+  
     @restaurants = Restaurant.all.reverse
     erb :"restaurants/index"
   end 
