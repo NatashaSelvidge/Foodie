@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
 
-<<<<<<< HEAD
     #user can login 
     get '/login' do 
       erb :"users/login"
@@ -30,6 +29,3 @@ end
 
 
   end 
-=======
-end 
->>>>>>> parent of 5ccf169... added sessions controller where users can login and logout of their account
