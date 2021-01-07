@@ -21,5 +21,11 @@ class ApplicationController < Sinatra::Base
   def logged_in?
     !!current_user
     end 
+
+    def require_login
+      unless logged_in?
+        redirect '/login'
+      end 
+    end 
   
-end
+end 

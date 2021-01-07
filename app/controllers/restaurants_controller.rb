@@ -1,13 +1,12 @@
 class RestaurantsController < ApplicationController
-  
+        # before do
+        #   require_login
+        # end 
   #CREATE
     # New (form)
       get "/restaurants/new" do 
-        if logged_in?
+        require_login
         erb :"restaurants/new"
-        else 
-          redirect '/login'
-      end 
     end
 
   # Create 
@@ -30,34 +29,29 @@ class RestaurantsController < ApplicationController
   #Index
     
   get "/restaurants" do 
-    if logged_in?
-    @restaurants = Restaurant.all.reverse
-    erb :"restaurants/index"
-    else 
-      redirect '/login'
+      require_login
+          @restaurants = Restaurant.all.reverse
+          erb :"restaurants/index"
     end 
-  end 
   
   #Show
   get '/restaurants/:id' do 
-    if logged_in?
-    @restaurant = Restaurant.find(params[:id])
-    erb :"/restaurants/show"
-    else 
-      redirect '/login'
-  end 
-end 
+     require_login
+        @restaurant = Restaurant.find_by(id: params[:id])
+      if @restaurant
+         erb :"/restaurants/show"
+      else
+        redirect '/restaurants'
+      end 
+    end 
 
 #UPDATE
 
   # Edit
       get "/restaurants/:id/edit" do
-        if logged_in?
+       require_login
          @restaurant = Restaurant.find(params[:id])
          erb :"/restaurants/edit"
-        else
-          redirect "/login"
-        end 
       end 
 
   # Update
