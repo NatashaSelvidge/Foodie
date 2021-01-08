@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
            @error = "Invaild. Please enter valid username and password."
             erb :"/users/login"
       else
-        if  @user = User.find_by(username: params[:username] && @user.authenticate(params[:password])
+          if  @user = User.find_by(username: params[:username])
+            @user.authenticate(params[:password])
             session[:user_id] = @user.id
             redirect "/restaurants"
         else 
@@ -24,8 +25,4 @@ class SessionsController < ApplicationController
         session.clear
       redirect '/'
     end 
-
-
-
-
   end 
