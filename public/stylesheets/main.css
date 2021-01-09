@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 html {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/marg_background_photo.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
   background-color: #fff;
   color: #555;
   font-family: "Lato", "Arial", sans-serif;
@@ -15,13 +20,117 @@ html {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
-.clearfix {
-  zoom: 1;
+
+/*-----------------------------*/
+/* NAVIGATION BAR */
+/*-----------------------------*/
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+  margin-right: 80px;
 }
-.clearfix::after {
-  content: ".";
-  clear: both;
-  display: block;
-  height: 0;
-  visibility: hidden;
+
+.hide {
+  display: none;
 }
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+  margin: 2px;
+  padding: 6px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px soild transparent;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+  text-decoration: none;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 25px;
+  margin-left: 70px;
+}
+
+.welcome-text-box {
+  position: absolute;
+  width: 1000px;
+  top: 40%;
+  left: 10%;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 200%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* ---- BUTTONS ----- */
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #cf6d17;
+  cursor: pointer;
+}
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #cf6d17;
+}
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #cf6d17;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* 
+.login-box  {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 30%;
+  left: 35%;
+  background-color: #fff;
+} */
