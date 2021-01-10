@@ -7,13 +7,8 @@
   box-sizing: border-box;
 }
 html {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/marg_background_photo.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
   background-color: #fff;
-  color: #555;
+  color: #fff;
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -59,7 +54,8 @@ html {
   width: auto;
   float: left;
   margin-top: 25px;
-  margin-left: 70px;
+  margin-bottom: 40px;
+  margin-left: 60px;
 }
 
 .welcome-text-box {
@@ -124,13 +120,44 @@ input[type="submit"]:active {
   cursor: pointer;
 }
 
+/*-----------------------------*/
+/* WELCOME PAGE*/
+/*-----------------------------*/
 
-/* 
-.login-box  {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  top: 30%;
-  left: 35%;
-  background-color: #fff;
-} */
+.welcome-text-box {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/marg_background_photo.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+/*-----------------------------*/
+/* RESTAURANT INDEX PAGE*/
+/*-----------------------------*/
+.wapper {
+  padding: 58px, 5px;
+  background-image: none;
+}
+.wapper .restaurants-containter {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  background-color: #f4f4f4;
+}
+
+.span-3-of-3 {
+  width: 100%;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+.restaurant-feature {
+  margin-bottom: 5px;
+}
+
+#restaurants {
+  padding: 50, 50;
+}
