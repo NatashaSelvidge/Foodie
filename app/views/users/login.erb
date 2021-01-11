@@ -1,6 +1,16 @@
-<p style="color: #ef4f4f;"> <%= @error %> </p>
-<form action="/login" method="post" name="signup">
-<input type="text" name="username" value="username">
-<input type="password" name="password">
-<input type="submit" value="Login">
-</form>
+
+<section class="login-section">
+<div class="card w-50" id="login-text-box" style="width: 25rem; >
+  <p style="color: #ef4f4f;"> <%= @error %> </p>
+  <div class="card-body">
+    <h5 class="card-title">Login</h5>
+    <p class="card-text"><form action="/login" method="post" name="login">
+    <lable>Username:</lable>
+    <input type="text" name="username" style="width: 200px;"><br>
+    <lable>Password:</lable>
+    <input type="password" name="password" style="width: 205px;">
+  <input type="submit" value="Login">
+  </form>
+</p>
+  </div>
+</section>
