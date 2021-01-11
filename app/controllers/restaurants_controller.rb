@@ -11,11 +11,11 @@ class RestaurantsController < ApplicationController
 
   # Create 
      post "/restaurants" do
-        @restaurant = current_user.restaurants.build(params)
+        @restaurant = current_user.restaurants.create(params)
         if @restaurant.image.empty?
             @restaurant.image = "https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8cmVzdGF1cmFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
         if @restaurant.save
-            redirect "/restaurants"
+            redirect "/restaurants/#{params[:id]}"
         else 
             @error = "Invaild. Please enter name and location."
             erb :"/restaurants/new"

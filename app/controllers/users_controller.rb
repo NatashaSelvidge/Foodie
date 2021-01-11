@@ -19,8 +19,13 @@ class UsersController < ApplicationController
     end 
 
 
+    get '/contact' do 
+        erb :"users/contact"
+    end  
 
-  #users can delete account
-
+    post '/contact' do 
+        redirect "/"
+      end
   
+ 
 end 

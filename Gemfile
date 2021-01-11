@@ -14,6 +14,8 @@ gem 'tux'
 gem "rest-client"
 gem "json"
 
+gem 'sassc'
+
 
 group :test do
   gem 'rspec'
