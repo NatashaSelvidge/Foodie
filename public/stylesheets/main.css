@@ -2,38 +2,48 @@
 /* BASIC SETUP */
 /*-----------------------------*/
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  
 }
 html {
-  background-color: #fff;
-  color: #fff;
+  color: black;
   font-family: "Lato", "Arial", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
+  font-weight: 200;
+  font-size: 18px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  
+}
+a {
+  color: #cf6d17;
+  text-decoration: none;
+  color: #fff;
 }
 
 /*-----------------------------*/
 /* NAVIGATION BAR */
 /*-----------------------------*/
-.main-nav {
-  float: right;
+ ul .main-nav {
   list-style: none;
   margin-top: 55px;
-  margin-right: 80px;
+  color: #fff;
+}
+a #nav  {
+  color: #fff;
+  text-decoration: none;
 }
 
-.hide {
-  display: none;
-}
 .main-nav li {
   display: inline-block;
   margin-left: 40px;
-  margin: 2px;
-  padding: 6px;
+  padding: 20px;
+  color: #fff; 
+}
+a #nav {
+  color: #fff;
+  text-decoration: none;
 }
 .main-nav li a:link,
 .main-nav li a:visited {
@@ -49,32 +59,6 @@ html {
   text-decoration: none;
 }
 
-.logo {
-  height: 100px;
-  width: auto;
-  float: left;
-  margin-top: 25px;
-  margin-bottom: 40px;
-  margin-left: 60px;
-}
-
-.welcome-text-box {
-  position: absolute;
-  width: 1000px;
-  top: 40%;
-  left: 10%;
-}
-
-h1 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #fff;
-  font-size: 200%;
-  word-spacing: 4px;
-  letter-spacing: 1px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
 
 /* ---- BUTTONS ----- */
 
@@ -120,44 +104,181 @@ input[type="submit"]:active {
   cursor: pointer;
 }
 
+#edit {
+  background-color: #e67e22;
+  margin-left: 55em;
+  border:rgba(0, 0, 0, 0.7);
+  
+}
+
+#delete {
+  background-color: #ea2c62;
+  border:rgba(0, 0, 0, 0.7);
+  
+}
+
+
+
 /*-----------------------------*/
 /* WELCOME PAGE*/
 /*-----------------------------*/
 
-.welcome-text-box {
+header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(../images/marg_background_photo.jpeg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
+  
 }
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  opacity: 0.8;
+}
+
+.welcome-text-box {
+  position: absolute;
+  width: 1000px;
+  top: 40%;
+  left: 10%;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 200%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/*-----------------------------*/
+/*  LOGIN PAGE*/
+/*-----------------------------*/
+
+.login-section, .signup-section {
+    overflow: hidden;
+
+}
+
+#login-text-box, #signup-text-box {
+  position: fixed;
+  margin-top: 15%;
+  margin-left: 23%;
+  padding-top: 30px;
+  
+}
+
+h5 {
+  text-align: center;
+}
+
 /*-----------------------------*/
 /* RESTAURANT INDEX PAGE*/
 /*-----------------------------*/
 .wapper {
   padding: 58px, 5px;
   background-image: none;
-}
-.wapper .restaurants-containter {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  background-color: #f4f4f4;
-}
+} 
+  .add-link {
+    color: #e67e22;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+  
+  }
+   .add-link:hover {
+     color: rgba(255, 255, 255, 0.733);
+  }
 
-.span-3-of-3 {
-  width: 100%;
-}
 
+/*--------------CARD IMAGE && CONTENT---------------*/
 .box img {
-  width: 100%;
+  width: 25%;
   height: auto;
-  margin-bottom: 15px;
 }
 .restaurant-feature {
   margin-bottom: 5px;
 }
+.section-restaurants {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/burger_photo.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 1000vh;
 
+}
+
+h4 {
+  color: rgba(255, 255, 255, 0.733);
+  text-align: center;
+}
+#card-title {
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #e67e22;
+
+}
 #restaurants {
   padding: 50, 50;
+  text-align: center;
 }
+
+#reviews-button {
+  width: 10rem;
+  background-color: #e67e22;
+  border-color: #cf6d17;;
+}
+
+a #reviews-button:link,
+a #reviews-button:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+a #reviews-button:hover,
+a #reviews-button:active {
+  border: 1px solid #cf6d17;
+}
+/*-----------------------------*/
+/* FORM */
+/*-----------------------------*/
+#contact { 
+  color: #fff;
+}
+.contact-form {
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+textarea {
+  height: 100px;
+}
+input[type="checkbox"] {
+  margin: 10px 10px 10px 0;
+}
+*:focus {
+  outline: none;
+}
+
