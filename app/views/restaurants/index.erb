@@ -1,16 +1,24 @@
-<h1>Restaurants</h1>
+<section class="section-restaurants" id="restaurants">
+<h4>Restaurants</h4>
 <h4>Don't see your favorite Restaurant?</h4>
-<h5><a href="/restaurants/new">Click to add a Restaurant</a></h5>
-
+<h5><a href="/restaurants/new" class="add-link">Add Restaurant</a></h5>
+<div class="row">
+  
+</div>
 <% @restaurants.each do |rest| %>
-<h2>Name: <a href="/restaurants/<%=rest.id%>"> <%= rest.name %> </a> </h2>
-<p> Location: <%= rest.location %></p>
-<p> Ratings: <%=rest.ratings %> ⭐️ </p>
-<p> Reviews: <%= rest.reviews %></p>
-<a href="/restaurants/<%=rest.id%>"><img src="<%= rest.image %>" alt="Restaurant Photo" width="200px"> </a>
-<% if rest.user && session[:user_id] == rest.user.id %>
-<a href="/restaurants/<%= rest.id %>/edit">Edit</a>
-<% end %>
-<% end %>
-<h4>Don't see your favorite Restaurant?</h4>
-<h5><a href="/restaurants/new">Click to add a Restaurant</a></h5>
+  
+        <div class="card" style="width: 25rem; height: 25em;" >
+        <a href="/restaurants/<%=rest.id%>"><img class="card-img-top" src="<%= rest.image %>" alt="Card image cap" style="width: 300px;">
+          <div class="card-body">
+          <h5 class="card-title"><a href="/restaurants/<%=rest.id%>" id="card-title"> <%= rest.name %> </a> </h5>
+          <div class="restaurant-features"><p class="card-text"><%=rest.ratings %><ion-icon name="star" class="icon-small"></ion-icon> </p></div>
+        <div class="restaurant-features"><p class="card-text"> <ion-icon name="navigate" class="icon-small"></ion-icon><%= rest.location %></p></div>
+      <a href="/restaurants/<%=rest.id%>" class="btn btn-primary" id="reviews-button">Reviews</a>
+      </div>
+  <% end %>
+  </div>
+
+
+</section>
+       
+
