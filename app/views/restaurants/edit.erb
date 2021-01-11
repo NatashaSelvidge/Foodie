@@ -1,23 +1,27 @@
+
 <h1>Edit <%= @restaurant.name %> !</h1>
 <p style="color: #ef4f4f;"> <%= @error %> </p>
-<form action="/restaurants/<%= @restaurant.id%>" method="POST">
-<input type="hidden" name="_method" value="patch">
-    <label> Name:</label>
-    <input  type="text" name="restaurant[name]" value="<%= @restaurant.name %>" >
-    <br>
-    <label> Rating:</label>
-    <input  type="text" name="restaurant[ratings]" value="<%= @restaurant.ratings %>" >
-    <br>
-    <label> Location:</label>
-    <input  type="text" name="restaurant[location]" value="<%= @restaurant.location %>" >
-    <br>
-    <label> Image URL:</label>
-    <input  type="text" name="restaurant[image]" value="<%= @restaurant.image %>" >
-    <br>
-    <label> Leave a Review:</label>
-    <br>
-    <textarea name="restaurant[reviews]" id="reviews" cols="30" rows="10"> <%= @restaurant.reviews %> </textarea>
-    <br>
-    <input type="submit" value="Edit Restaurant">  
-    <a href="/restaurants">Home</a>
+
+<form action="/restaurants/<%= @restaurant.id %>" method="POST" id="edit-form" >
+<div class="form-group">
+<input type="hidden" name="_method" value="patch" id="edit-form">
+    <label for="exampleFormControlInput1" id="edit-label" > Name:</label>
+    <input  type="text" name="restaurant[name]" value="<%= @restaurant.name %>" class="form-control" id="exampleFormControlInput1" style="width: 400px;"  >
+     </div>
+     <div class="form-group">
+    <label for="exampleFormControlInput1" id="edit-label" > Rating:</label>
+    <input  type="text" name="restaurant[ratings]" value="<%= @restaurant.ratings %>" class="form-control" id="exampleFormControlInput1" style="width: 400px;"  >
+    
+    <label for="exampleFormControlInput1" id="edit-label" > Location:</label>
+    <input  type="text" name="restaurant[location]" value="<%= @restaurant.location %>" class="form-control" id="exampleFormControlInput1" style="width: 400px;"  >
+    
+    <label for="exampleFormControlInput1" id="edit-label" > Image URL:</label>
+    <input  type="text" name="restaurant[image]" value="<%= @restaurant.image %>" class="form-control" id="exampleFormControlInput1" style="width: 400px;"  >
+     </div>
+     <div class="form-group">
+    <label for="exampleFormControlTextarea1" id="edit-label" > Leave a Review:</label>
+    <textarea name="restaurant[reviews]" id="reviews" class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 400px;" > <%= @restaurant.reviews %> </textarea>
+    </div>
+    <input type="submit" value="Edit Restaurant" id="edit-button">  
 </form>
+ 
