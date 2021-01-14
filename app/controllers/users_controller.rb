@@ -1,31 +1,28 @@
 class UsersController < ApplicationController
 
   # User can sign up
-  get '/signup' do 
+  get "/signup" do
     erb :"users/signup"
-  end 
+  end
+  # users should not be able to create and account without filling in the whole form
+  # users should not be able to create and account with the same username
 
-  post '/signup' do 
-    #users should not be able to create and account without filling in the whole form
-    #users should not be able to create and account with the same username
+  post "/signup" do
     @user = User.new(params)
     if @user.save
       session[:user_id] = @user.id
       redirect "/restaurants"
-      else
-        @error = "Invalid input."
-        erb :"/users/signup"
-      end
-    end 
+    else
+      @error = "Invalid credentials"
+      erb :"/users/signup"     
+    end
+  end 
 
+  # get "/contact" do
+  #   erb :"users/contact"
+  # end
 
-    get '/contact' do 
-        erb :"users/contact"
-    end  
-
-    post '/contact' do 
-        redirect "/"
-      end
-  
- 
-end 
+  # post "/contact" do
+  #   redirect "/"
+  # end
+end
