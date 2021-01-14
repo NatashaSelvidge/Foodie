@@ -1,10 +1,11 @@
 
 <section class="login-section">
 <div class="card w-50" id="login-text-box" style="width: 25rem; >
-  <p style="color: #ef4f4f;"> <%= @error %> </p>
-  <div class="card-body">
-    <h5 class="card-title">Login</h5>
-    <p class="card-text"><form action="/login" method="post" name="login">
+<div class="card-body">
+<h5 class="card-title">Login</h5>
+<p class="card-text">
+<form action="/login" method="POST" name="login">
+<p class="errors"> <%= @error %> </p>
     <lable>Username:</lable>
     <input type="text" name="username" style="width: 200px;"><br>
     <lable>Password:</lable>

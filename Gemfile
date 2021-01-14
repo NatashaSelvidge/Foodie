@@ -9,10 +9,10 @@ gem 'sqlite3', '~> 1.3.6'
 gem 'thin'
 gem 'shotgun'
 gem 'pry'
-gem 'bcrypt'
 gem 'tux'
 gem "rest-client"
 gem "json"
+gem 'bcrypt'
 
 gem 'sassc'
 
