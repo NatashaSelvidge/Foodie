@@ -304,3 +304,9 @@ input[type="checkbox"] {
   outline: none;
 }
 
+/*-----------------------------*/
+/* ERRORS */
+/*-----------------------------*/
+p.errors {
+  color: #ef4f4f;
+}

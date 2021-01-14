@@ -1,10 +1,10 @@
 <section class="signup-section">
 <div class="card w-50" id="signup-text-box">
 <h5 class="card-title">Sign Up</h5>
-<p style="color: #ef4f4f;"> <%= @error %> </p>
 <div class="card-body">
 <p class="card-text">
-<form >
+<form action="/signup" method="POST">
+<p class="errors"> <%= @error %> </p>
 <lable>Username:</lable>
 <input type="text" name="username" style="width: 200px;"><br>
 <lable>Password:</lable>

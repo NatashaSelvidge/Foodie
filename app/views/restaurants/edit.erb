@@ -1,6 +1,6 @@
 
 <h1>Edit <%= @restaurant.name %> !</h1>
-<p style="color: #ef4f4f;"> <%= @error %> </p>
+<p class="errors"> <%= @error %> </p>
 
 <form action="/restaurants/<%= @restaurant.id %>" method="POST" id="edit-form" >
 <div class="form-group">
