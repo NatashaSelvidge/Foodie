@@ -1,7 +1,5 @@
 class RestaurantsController < ApplicationController
-        # before do
-        #   require_login
-        # end 
+       
   #CREATE
     # New (form)
       get "/restaurants/new" do 

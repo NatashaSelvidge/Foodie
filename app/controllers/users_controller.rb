@@ -18,11 +18,11 @@ class UsersController < ApplicationController
     end
   end 
 
-  # get "/contact" do
-  #   erb :"users/contact"
-  # end
+  get "/contact" do
+    erb :"users/contact"
+  end
 
-  # post "/contact" do
-  #   redirect "/"
-  # end
+  post "/contact" do
+    redirect "/"
+  end
 end

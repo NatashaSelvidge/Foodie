@@ -5,7 +5,6 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  
 }
 html {
   color: black;
@@ -14,7 +13,6 @@ html {
   font-size: 18px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  
 }
 a {
   color: #cf6d17;
@@ -25,12 +23,12 @@ a {
 /*-----------------------------*/
 /* NAVIGATION BAR */
 /*-----------------------------*/
- ul .main-nav {
+ul .main-nav {
   list-style: none;
   margin-top: 55px;
   color: #fff;
 }
-a #nav  {
+a #nav {
   color: #fff;
   text-decoration: none;
 }
@@ -39,7 +37,7 @@ a #nav  {
   display: inline-block;
   margin-left: 40px;
   padding: 20px;
-  color: #fff; 
+  color: #fff;
 }
 a #nav {
   color: #fff;
@@ -58,7 +56,6 @@ a #nav {
   border-bottom: 2px solid #e67e22;
   text-decoration: none;
 }
-
 
 /* ---- BUTTONS ----- */
 
@@ -106,18 +103,14 @@ input[type="submit"]:active {
 
 #edit {
   background-color: #e67e22;
-  margin-left: 55em;
-  border:rgba(0, 0, 0, 0.7);
-  
+  margin-left: 35px;
+  border: rgba(0, 0, 0, 0.7);
 }
 
 #delete {
   background-color: #ea2c62;
-  border:rgba(0, 0, 0, 0.7);
-  
+  border: rgba(0, 0, 0, 0.7);
 }
-
-
 
 /*-----------------------------*/
 /* WELCOME PAGE*/
@@ -130,7 +123,6 @@ header {
   background-position: center;
   background-attachment: fixed;
   height: 100vh;
-  
 }
 .logo {
   height: 100px;
@@ -163,17 +155,17 @@ h1 {
 /*  LOGIN PAGE*/
 /*-----------------------------*/
 
-.login-section, .signup-section {
-    overflow: hidden;
-
+.login-section,
+.signup-section {
+  overflow: hidden;
 }
 
-#login-text-box, #signup-text-box {
+#login-text-box,
+#signup-text-box {
   position: fixed;
   margin-top: 15%;
   margin-left: 23%;
   padding-top: 30px;
-  
 }
 
 h5 {
@@ -186,18 +178,16 @@ h5 {
 .wapper {
   padding: 58px, 5px;
   background-image: none;
-} 
-  .add-link {
-    color: #e67e22;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-  
-  }
-   .add-link:hover {
-     color: rgba(255, 255, 255, 0.733);
-  }
-
+}
+.add-link {
+  color: #e67e22;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+.add-link:hover {
+  color: rgba(255, 255, 255, 0.733);
+}
 
 /*--------------CARD IMAGE && CONTENT---------------*/
 .box img {
@@ -214,7 +204,6 @@ h5 {
   background-position: center;
   background-attachment: fixed;
   height: 1000vh;
-
 }
 
 h4 {
@@ -222,12 +211,11 @@ h4 {
   text-align: center;
 }
 #card-title {
-    text-align: center;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: bolder;
-    color: #e67e22;
-
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #e67e22;
 }
 #restaurants {
   padding: 50, 50;
@@ -237,7 +225,7 @@ h4 {
 #reviews-button {
   width: 10rem;
   background-color: #e67e22;
-  border-color: #cf6d17;;
+  border-color: #cf6d17;
 }
 
 a #reviews-button:link,
@@ -262,28 +250,54 @@ label #edit-label {
   margin-left: 500px;
 }
 
-
-#add-form, #edit-form {
+#add-form,
+#edit-form {
   margin-left: 500px;
 }
 
- #add-label {
+#add-label {
   color: #ffffff;
 }
-#edit-button, #add-button {
+#edit-button,
+#add-button {
   margin-top: 10px;
 }
 
 /*-----------------------------*/
-/* FORM */
+/* SHOW PAGE  */
 /*-----------------------------*/
-#contact { 
-  color: #fff;
+
+.show-section {
+  padding-top: 100px;
+}
+/*-----------------------------*/
+/* ERRORS */
+/*-----------------------------*/
+p.errors {
+  color: #ef4f4f;
+}
+
+/*-----------------------------*/
+/* CONTACT US PAGE */
+/*-----------------------------*/
+
+h2 {
+  color: #e67e22;
+  margin-left: 650px;
+}
+
+lable .form-lable {
+  color: #000000;
+}
+
+#contact {
+  color: #000000;
 }
 .contact-form {
   background-color: #fff;
   width: 100%;
   margin: 0 auto;
+  padding: 50px 20px;
 }
 input[type="text"],
 input[type="email"],
@@ -295,7 +309,7 @@ textarea {
   border: 1px solid #ccc;
 }
 textarea {
-  height: 100px;
+  height: 250px;
 }
 input[type="checkbox"] {
   margin: 10px 10px 10px 0;
@@ -305,8 +319,49 @@ input[type="checkbox"] {
 }
 
 /*-----------------------------*/
-/* ERRORS */
+/* FAILURE 404 PAGE */
 /*-----------------------------*/
-p.errors {
-  color: #ef4f4f;
+
+div.dialog {
+  width: 100%;
+  max-width: 33em;
+  text-align:center;
+  padding-top: 100px;
+}
+
+div.dialog > div {
+  border: 1px solid #ccc;
+  border-right-color: #999;
+  border-left-color: #999;
+  border-bottom-color: #bbb;
+  border-top: #b00100 solid 4px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+}
+
+div.dialog > p {
+  margin: 0 0 1em;
+  padding: 1em;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-right-color: #999;
+  border-left-color: #999;
+  border-bottom-color: #999;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-color: #dadada;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+}
+.failure-home {
+  color: #730e15;
+}
+.failure-title {
+  font-size: 30px;
+    color: #730e15;
+  line-height: 1.5em;
+  text-align: center;
 }

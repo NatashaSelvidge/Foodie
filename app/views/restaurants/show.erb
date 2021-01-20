@@ -1,13 +1,13 @@
-<div class="card" id="card-show-page" style="width: 50rem;">
+<section class="show-section">
+<div class="card" id="card-show-page" style="width: 50rem; ">
 
 <img class="card-img-top" src="<%= @restaurant.image %>" alt="Card image cap">
 <div class="card-body">
 
 <h5 class="card-title" style="color: orange;"><%= @restaurant.name %></h5>
 <h6><%= @restaurant.location %></h6>
-<lable>Review:</lable>
+Review
 <p class="card-text"><%= @restaurant.reviews %></p>
-</div>
 </div>
 
 <% if current_user == @restaurant.user %>
@@ -15,8 +15,9 @@
 <input type="hidden" name="_method" value="delete">
 <a href="/restaurants/<%= @restaurant.id%>/edit" class="btn btn-primary" id="edit">Edit</a>
 <button type="submit" class="btn btn-primary" id="delete">Delete</button>
-</form>
+</div>
 <% end %>
+</form>
 
-  
+  </section>
    
