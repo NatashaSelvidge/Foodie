@@ -25,4 +25,12 @@ class UsersController < ApplicationController
   post "/contact" do
     redirect "/"
   end
+
+  get "/my_restaurants" do 
+ @restaurants = current_user.restaurants 
+  erb :"users/my_restaurants"
+end 
+
+
+    
 end

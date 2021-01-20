@@ -27,6 +27,8 @@ class RestaurantsController < ApplicationController
           @restaurants = Restaurant.all.reverse
           erb :"restaurants/index"
     end 
+
+  
   
   #Show
   get '/restaurants/:id' do 
